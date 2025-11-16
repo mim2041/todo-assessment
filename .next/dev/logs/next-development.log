@@ -5,3 +5,9 @@
 [00:01:18.636] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:01:22.156] Browser WARN    Image with src "/_next/static/media/loginImg.6ff0d81c.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:58:56.850] Server  LOG      ✓ Compiled in 544ms
+[00:59:43.314] Server  LOG      ✓ Compiled in 220ms
+[01:01:15.548] Server  LOG      ✓ Compiled in 508ms
+[01:01:48.632] Server  LOG      ✓ Compiled in 105ms
+[01:02:06.864] Server  LOG      ✓ Compiled in 151ms
+[01:07:25.783] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

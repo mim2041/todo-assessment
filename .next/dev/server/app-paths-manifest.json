@@ -1,4 +1,6 @@
 {
   "/[locale]/(auth)/login/page": "app/[locale]/(auth)/login/page.js",
+  "/[locale]/(auth)/signup/page": "app/[locale]/(auth)/signup/page.js",
+  "/[locale]/(private)/todos/page": "app/[locale]/(private)/todos/page.js",
   "/[locale]/(public)/(landing-page)/page": "app/[locale]/(public)/(landing-page)/page.js"
 }
