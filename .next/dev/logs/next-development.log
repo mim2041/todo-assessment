@@ -1,0 +1,7 @@
+[00:00:49.638] Server  LOG      ○ Compiling middleware ...
+[00:00:52.052] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:56.085] Server  LOG      ✓ Ready in 43.6s
+[00:01:02.642] Server  LOG      ○ Compiling /[locale] ...
+[00:01:18.636] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:22.156] Browser WARN    Image with src "/_next/static/media/loginImg.6ff0d81c.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
