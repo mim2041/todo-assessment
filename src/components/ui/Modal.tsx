@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import { cn } from '@/utils/helpers/cn';
+import React, { useEffect } from "react";
+import { cn } from "@/utils/helpers/cn";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
   children: React.ReactNode;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: "sm" | "md" | "lg" | "xl";
 }
 
 export const Modal: React.FC<ModalProps> = ({
@@ -16,27 +16,27 @@ export const Modal: React.FC<ModalProps> = ({
   onClose,
   title,
   children,
-  size = 'md',
+  size = "md",
 }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
   if (!isOpen) return null;
 
   const sizes = {
-    sm: 'max-w-md',
-    md: 'max-w-lg',
-    lg: 'max-w-2xl',
-    xl: 'max-w-4xl',
+    sm: "max-w-md",
+    md: "max-w-lg",
+    lg: "max-w-2xl",
+    xl: "max-w-4xl",
   };
 
   return (
@@ -46,38 +46,30 @@ export const Modal: React.FC<ModalProps> = ({
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
       <div
         className={cn(
-          'relative bg-white rounded-lg shadow-xl w-full mx-4 max-h-[90vh] overflow-y-auto',
+          "relative bg-white rounded-lg shadow-xl w-full mx-4 max-h-[90vh] overflow-y-auto",
           sizes[size]
         )}
       >
         {title && (
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
+          <div className="flex items-center justify-between p-6 ">
+            <div>
+              <h2 className="text-sm font-semibold text-gray-900">{title}</h2>
+              <div className="h-0.5 w-14 bg-[#5272FF] rounded-full"></div>
+            </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
+              className="text-gray-400 hover:text-gray-600 transition-colors underline"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              Go Back
             </button>
           </div>
         )}
-        <div className={title ? 'p-6' : 'p-6'}>{children}</div>
+        <div className={title ? "p-6" : "p-6"}>{children}</div>
       </div>
     </div>
   );
 };
-

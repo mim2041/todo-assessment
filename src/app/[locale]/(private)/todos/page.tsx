@@ -6,12 +6,16 @@ import { TodoModal } from "@/components/todo/TodoModal";
 import { TodoProvider, useTodos } from "@/utils/context/TodoContext";
 import { Todo, CreateTodoInput } from "@/types/todo";
 import { FaPlus, FaSearch, FaChevronDown } from "react-icons/fa";
+import { BsGrid3X2GapFill } from "react-icons/bs";
+import { FiEdit3 } from "react-icons/fi";
+import { MdOutlineDelete } from "react-icons/md";
 
 function TodosPageContent() {
   const { todos, addTodo, updateTodo, deleteTodo, loading } = useTodos();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingTodo, setEditingTodo] = useState<Todo | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showFilter, setShowFilter] = useState(false);
 
   const handleAddTodo = () => {
     setEditingTodo(null);
@@ -44,7 +48,11 @@ function TodosPageContent() {
       <div className="w-full mx-auto">
         {/* Page Title and Actions */}
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-900">Todos</h1>
+          <div className="flex flex-col items-start">
+            <h1 className="text-[24px] font-semibold text-gray-900 ">Todos</h1>
+            <div className="h-0.5 w-14 bg-[#5272FF] rounded-full"></div>
+          </div>
+
           <Button
             onClick={handleAddTodo}
             className="bg-blue-600 hover:bg-blue-700"
@@ -55,25 +63,59 @@ function TodosPageContent() {
         </div>
 
         {/* Search and Sort Bar */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 mb-6">
+        <div className=" rounded-lg mb-6">
           <div className="flex gap-4">
             {/* Search */}
             <div className="flex-1 relative">
-              <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#5272FF] w-4 h-4" />
               <input
                 type="text"
                 placeholder="Search your task here..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-[#4B5563] text-[14px]"
               />
             </div>
 
             {/* Sort */}
-            <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-              <span className="text-gray-700">Sort by</span>
-              <FaChevronDown className="w-3 h-3 text-gray-500" />
-            </button>
+            {/* Filter Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setShowFilter((prev) => !prev)}
+                className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-colors"
+              >
+                <span className="text-gray-700">Filter By</span>
+                <FaChevronDown className="w-3 h-3 text-gray-500" />
+              </button>
+
+              {showFilter && (
+                <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 p-4 z-50">
+                  <p className="text-gray-700 font-semibold mb-2">Date</p>
+
+                  <div className="space-y-2">
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" className="w-4 h-4" />
+                      Deadline Today
+                    </label>
+
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" className="w-4 h-4" />
+                      Expires in 5 days
+                    </label>
+
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" className="w-4 h-4" />
+                      Expires in 10 days
+                    </label>
+
+                    <label className="flex items-center gap-2 text-sm text-gray-700">
+                      <input type="checkbox" className="w-4 h-4" />
+                      Expires in 30 days
+                    </label>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
@@ -173,29 +215,32 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo, onEdit }) => {
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow">
       {/* Header */}
-      <div className="flex justify-between items-start mb-3">
+      <div className="flex justify-between items-start mb-8">
         <h3 className="font-semibold text-gray-900 text-lg flex-1">
           {todo.title}
         </h3>
-        <span
-          className={`px-3 py-1 rounded-full text-xs font-medium border ${getPriorityColor(
-            todo.priority
-          )}`}
-        >
-          {todo.priority.charAt(0).toUpperCase() + todo.priority.slice(1)}
-        </span>
+        <div className="flex items-center">
+          <span
+            className={`px-3 py-1.5 rounded-md text-xs font-medium border ${getPriorityColor(
+              todo.priority
+            )}`}
+          >
+            {todo.priority.charAt(0).toUpperCase() + todo.priority.slice(1)}
+          </span>
+          <BsGrid3X2GapFill className="w-5 h-5 text-gray-400 mt-1 rotate-90" />
+        </div>
       </div>
 
       {/* Description */}
       {todo.description && (
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+        <p className="text-sm text-[#4B5563] mb-8 line-clamp-2">
           {todo.description}
         </p>
       )}
 
       {/* Footer */}
-      <div className="flex justify-between items-center pt-3 border-t border-gray-100">
-        <div className="text-xs text-gray-500">
+      <div className="flex justify-between items-center">
+        <div className="text-xs text-[#4B5563]">
           Due{" "}
           {new Date(todo.todo_date).toLocaleDateString("en-US", {
             month: "short",
@@ -207,42 +252,18 @@ const TodoCard: React.FC<TodoCardProps> = ({ todo, onEdit }) => {
         <div className="flex gap-2">
           <button
             onClick={() => onEdit(todo)}
-            className="p-1.5 hover:bg-gray-100 rounded transition-colors"
+            className=" hover:bg-gray-100 rounded transition-colors bg-[#EEF7FF] p-2"
             title="Edit"
           >
-            <svg
-              className="w-4 h-4 text-gray-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-              />
-            </svg>
+            <FiEdit3 className="w-4 h-4 text-gray-600" />
           </button>
 
           <button
             onClick={handleDelete}
-            className="p-1.5 hover:bg-gray-100 rounded transition-colors"
+            className=" hover:bg-gray-100 rounded transition-colors bg-[#EEF7FF] p-2"
             title="Delete"
           >
-            <svg
-              className="w-4 h-4 text-red-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-              />
-            </svg>
+            <MdOutlineDelete className="w-4 h-4 text-[#DC2626]" />
           </button>
         </div>
       </div>

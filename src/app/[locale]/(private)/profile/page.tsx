@@ -108,10 +108,11 @@ export default function ProfilePage() {
     <div className="p-6">
       <div className="w-full mx-auto bg-white rounded-xl shadow-lg p-8 ">
         {/* Page Header */}
-        <div className="mb-4">
-          <h1 className="text-[24px] font-semibold text-gray-900 mb-2">
+        <div className="mb-6">
+          <h1 className="text-[24px] font-semibold text-gray-900">
             Account Information
           </h1>
+          <div className="h-[2px] w-20 bg-[#5272FF] rounded-full"></div>
         </div>
 
         <div className="flex flex-col gap-6 rounded-xl">
