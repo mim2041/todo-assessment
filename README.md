@@ -254,20 +254,6 @@ All forms include:
 - **useAuth Hook**: Manages authentication state
 - Local state for UI interactions
 
-## 🚧 Future Enhancements
-
-Potential improvements:
-
-- Backend API integration
-- Real database storage
-- User authentication with JWT
-- Task categories/tags
-- Due dates and reminders
-- Task search functionality
-- Dark mode support
-- Export/import todos
-- Collaboration features
-
 ## 📄 License
 
 This project is created for assessment purposes.

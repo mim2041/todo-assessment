@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
 import { FaCheckSquare, FaUser, FaSignOutAlt } from "react-icons/fa";
 import { cn } from "@/utils/helpers/cn";
-import { AiFillHome } from "react-icons/ai";
+import todoIcon from "@/assets/icons/todo.svg";
+import Image from "next/image";
 
 export const Sidebar: React.FC = () => {
   const { user, logout } = useAuth();
@@ -39,18 +40,6 @@ export const Sidebar: React.FC = () => {
       {/* Navigation */}
       <nav className="flex-1 p-4">
         <Link
-          href="/en/dashboard"
-          className={cn(
-            "flex items-center gap-3 px-4 py-3 rounded-lg mb-2 transition-colors",
-            isActive("/dashboard")
-              ? "bg-white/10 text-white"
-              : "text-blue-200 hover:bg-white/5"
-          )}
-        >
-          <AiFillHome className="w-5 h-5" />
-          <span>Dashboard</span>
-        </Link>
-        <Link
           href="/en/todos"
           className={cn(
             "flex items-center gap-3 px-4 py-3 rounded-lg mb-2 transition-colors",
@@ -59,7 +48,7 @@ export const Sidebar: React.FC = () => {
               : "text-blue-200 hover:bg-white/5"
           )}
         >
-          <FaCheckSquare className="w-5 h-5" />
+          <Image src={todoIcon} alt="Todos" className="w-5 h-5" />
           <span>Todos</span>
         </Link>
 

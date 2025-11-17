@@ -39,7 +39,7 @@ export default function ProfilePage() {
         last_name: user.last_name,
         email: user.email,
         address: user.address || "",
-        number: user.number || "",
+        number: (user as any).number || "",
         birthday: user.birthday || "",
       });
     }
@@ -112,7 +112,7 @@ export default function ProfilePage() {
           <h1 className="text-[24px] font-semibold text-gray-900">
             Account Information
           </h1>
-          <div className="h-[2px] w-20 bg-[#5272FF] rounded-full"></div>
+          <div className="h-0.5 w-20 bg-[#5272FF] rounded-full"></div>
         </div>
 
         <div className="flex flex-col gap-6 rounded-xl">
