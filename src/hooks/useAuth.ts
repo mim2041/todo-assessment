@@ -1,129 +1,183 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { User, SignupData, LoginData, AuthResponse } from "@/types/user";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
+import { User, AuthResponse } from "@/types/user";
 import { apiClient } from "@/utils/api/client";
 import { authEndpoints, userEndpoints } from "@/config/endpoints";
 
-export const useAuth = () => {
-    const [user, setUser] = useState<User | null>(null);
-    const [loading, setLoading] = useState(true);
+type UpdateUserPayload = Omit<Partial<User>, "profile_image"> & {
+  profile_image?: File | null | string;
+};
 
-    useEffect(() => {
-        // Check if user is logged in and fetch profile
-        const loadUser = async () => {
-            const token = localStorage.getItem("access_token");
-            if (token) {
-                try {
-                    const userData = await apiClient.get<User>(userEndpoints.profile, true);
-                    setUser(userData);
+interface AuthContextValue {
+  user: User | null;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<User>;
+  signup: (
+    first_name: string,
+    last_name: string,
+    email: string,
+    password: string
+  ) => Promise<User>;
+  logout: () => void;
+  updateUser: (updates: UpdateUserPayload) => Promise<User>;
+  isAuthenticated: boolean;
+}
 
-                    // Ensure cookies are set (in case page was refreshed)
-                    const refreshToken = localStorage.getItem("refresh_token");
-                    if (refreshToken) {
-                        document.cookie = `accessToken=${token}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
-                        document.cookie = `refreshToken=${refreshToken}; path=/; max-age=${30 * 24 * 60 * 60}; SameSite=Lax`;
-                    }
-                } catch (error) {
-                    console.error("Failed to load user:", error);
-                    // Clear invalid tokens
-                    localStorage.removeItem("access_token");
-                    localStorage.removeItem("refresh_token");
-                    document.cookie = "accessToken=; path=/; max-age=0";
-                    document.cookie = "refreshToken=; path=/; max-age=0";
-                }
-            }
-            setLoading(false);
-        };
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-        loadUser();
-    }, []);
+const isFileValue = (value: unknown): value is File =>
+  typeof File !== "undefined" && value instanceof File;
 
-    const login = async (email: string, password: string) => {
-        const formData = new FormData();
-        formData.append("email", email);
-        formData.append("password", password);
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
-        const response = await apiClient.post<AuthResponse>(
-            authEndpoints.login,
-            formData,
-            false
-        );
+  const clearStoredTokens = useCallback(() => {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+    document.cookie = "accessToken=; path=/; max-age=0";
+    document.cookie = "refreshToken=; path=/; max-age=0";
+  }, []);
 
-        // Store tokens in localStorage
-        localStorage.setItem("access_token", response.access);
-        localStorage.setItem("refresh_token", response.refresh);
+  const persistTokens = useCallback((access: string, refresh: string) => {
+    localStorage.setItem("access_token", access);
+    localStorage.setItem("refresh_token", refresh);
+    document.cookie = `accessToken=${access}; path=/; max-age=${
+      7 * 24 * 60 * 60
+    }; SameSite=Lax`;
+    document.cookie = `refreshToken=${refresh}; path=/; max-age=${
+      30 * 24 * 60 * 60
+    }; SameSite=Lax`;
+  }, []);
 
-        // Also set cookies for middleware
-        document.cookie = `accessToken=${response.access}; path=/; max-age=${7 * 24 * 60 * 60}; SameSite=Lax`;
-        document.cookie = `refreshToken=${response.refresh}; path=/; max-age=${30 * 24 * 60 * 60}; SameSite=Lax`;
+  const loadUser = useCallback(async () => {
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      setUser(null);
+      setLoading(false);
+      return;
+    }
 
-        // Fetch user profile
-        const userData = await apiClient.get<User>(userEndpoints.profile, true);
-        setUser(userData);
+    try {
+      const userData = await apiClient.get<User>(userEndpoints.profile, true);
+      setUser(userData);
+      const refreshToken = localStorage.getItem("refresh_token");
+      if (refreshToken) {
+        persistTokens(token, refreshToken);
+      }
+    } catch (error) {
+      console.error("Failed to load user:", error);
+      clearStoredTokens();
+      setUser(null);
+    } finally {
+      setLoading(false);
+    }
+  }, [clearStoredTokens, persistTokens]);
 
-        return userData;
-    };
+  useEffect(() => {
+    loadUser();
+  }, [loadUser]);
 
-    const signup = async (
-        first_name: string,
-        last_name: string,
-        email: string,
-        password: string
+  const login = useCallback(
+    async (email: string, password: string) => {
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("password", password);
+
+      const response = await apiClient.post<AuthResponse>(
+        authEndpoints.login,
+        formData,
+        false
+      );
+
+      persistTokens(response.access, response.refresh);
+
+      const userData = await apiClient.get<User>(userEndpoints.profile, true);
+      setUser(userData);
+      setLoading(false);
+      return userData;
+    },
+    [persistTokens]
+  );
+
+  const signup = useCallback(
+    async (
+      first_name: string,
+      last_name: string,
+      email: string,
+      password: string
     ) => {
-        const formData = new FormData();
-        formData.append("first_name", first_name);
-        formData.append("last_name", last_name);
-        formData.append("email", email);
-        formData.append("password", password);
+      const formData = new FormData();
+      formData.append("first_name", first_name);
+      formData.append("last_name", last_name);
+      formData.append("email", email);
+      formData.append("password", password);
 
-        await apiClient.post<User>(
-            authEndpoints.signup,
-            formData,
-            false
-        );
+      await apiClient.post<User>(authEndpoints.signup, formData, false);
+      return login(email, password);
+    },
+    [login]
+  );
 
-        // After signup, log in to get tokens
-        const userData = await login(email, password);
+  const logout = useCallback(() => {
+    clearStoredTokens();
+    setUser(null);
+    setLoading(false);
+  }, [clearStoredTokens]);
 
-        return userData;
-    };
+  const updateUser = useCallback(async (updates: UpdateUserPayload) => {
+    const formData = new FormData();
+    Object.entries(updates).forEach(([key, value]) => {
+      if (value === undefined || value === null) {
+        return;
+      }
 
-    const logout = () => {
-        localStorage.removeItem("access_token");
-        localStorage.removeItem("refresh_token");
+      if (isFileValue(value)) {
+        formData.append(key, value, value.name);
+        return;
+      }
 
-        // Clear cookies
-        document.cookie = "accessToken=; path=/; max-age=0";
-        document.cookie = "refreshToken=; path=/; max-age=0";
+      formData.append(key, value.toString());
+    });
 
-        setUser(null);
-    };
+    const updatedUser = await apiClient.patch<User>(
+      userEndpoints.updateProfile,
+      formData,
+      true
+    );
+    setUser(updatedUser);
+    return updatedUser;
+  }, []);
 
-    const updateUser = async (updates: Partial<User>) => {
-        const formData = new FormData();
-        Object.entries(updates).forEach(([key, value]) => {
-            if (value !== undefined && value !== null) {
-                formData.append(key, value.toString());
-            }
-        });
+  const value = useMemo<AuthContextValue>(
+    () => ({
+      user,
+      loading,
+      login,
+      signup,
+      logout,
+      updateUser,
+      isAuthenticated: !!user,
+    }),
+    [user, loading, login, signup, logout, updateUser]
+  );
 
-        const updatedUser = await apiClient.patch<User>(
-            userEndpoints.updateProfile,
-            formData,
-            true
-        );
-        setUser(updatedUser);
-        return updatedUser;
-    };
+  return React.createElement(AuthContext.Provider, { value }, children);
+};
 
-    return {
-        user,
-        loading,
-        login,
-        signup,
-        logout,
-        updateUser,
-        isAuthenticated: !!user,
-    };
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
 };

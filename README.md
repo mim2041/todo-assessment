@@ -136,21 +136,6 @@ todo-app/
 3. Enter a title (required) and optional description
 4. Click "Add Todo" to save
 
-### Managing Todos
-
-- **Complete a todo**: Click the checkbox next to the todo
-- **Edit a todo**: Click the edit icon (pencil)
-- **Delete a todo**: Click the delete icon (trash)
-- **Reorder todos**: Drag and drop using the grip handle
-
-### Filtering Todos
-
-Use the filter buttons to view:
-
-- **All**: View all todos
-- **Active**: View incomplete todos only
-- **Completed**: View completed todos only
-
 ### Profile Management
 
 1. Click "Profile" in the navigation
@@ -254,25 +239,6 @@ All forms include:
 - **useAuth Hook**: Manages authentication state
 - Local state for UI interactions
 
-## 📄 License
+## 🚀 Live Demo
 
-This project is created for assessment purposes.
-
-## 🤝 Contributing
-
-This is an assessment project. For production use, consider:
-
-1. Implementing a real backend
-2. Adding proper authentication
-3. Adding tests (Jest, React Testing Library)
-4. Implementing CI/CD
-5. Adding error boundaries
-6. Performance optimization
-
-## 📞 Support
-
-For issues or questions about this assessment project, please contact the project maintainer.
-
----
-
-Built with ❤️ using Next.js and TypeScript
+🔗 **Live Website:** https://todo-assessment-pink.vercel.app/en/login
