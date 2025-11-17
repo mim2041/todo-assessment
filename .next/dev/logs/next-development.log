@@ -1,13 +1,965 @@
-[00:00:49.638] Server  LOG      ○ Compiling middleware ...
-[00:00:52.052] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:56.085] Server  LOG      ✓ Ready in 43.6s
-[00:01:02.642] Server  LOG      ○ Compiling /[locale] ...
-[00:01:18.636] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:22.156] Browser WARN    Image with src "/_next/static/media/loginImg.6ff0d81c.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:58:56.850] Server  LOG      ✓ Compiled in 544ms
-[00:59:43.314] Server  LOG      ✓ Compiled in 220ms
-[01:01:15.548] Server  LOG      ✓ Compiled in 508ms
-[01:01:48.632] Server  LOG      ✓ Compiled in 105ms
-[01:02:06.864] Server  LOG      ✓ Compiled in 151ms
-[01:07:25.783] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:38.241] Server  LOG      ○ Compiling middleware ...
+[00:05:15.517] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:05:24.537] Server  LOG      ✓ Ready in 316.8s
+[00:05:27.893] Server  LOG      ○ Compiling /[locale]/profile ...
+[00:06:10.970] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:10.973] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:10.975] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:10.976] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:14.626] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:14.627] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:14.628] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:14.628] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:06:14.729] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:42.947] Server  LOG      ✓ Compiled in 580ms
+[00:16:27.054] Server  LOG      ✓ Compiled in 464ms
+[00:16:29.540] Server  LOG      ✓ Compiled in 118ms
+[00:17:06.316] Server  LOG      ✓ Compiled in 526ms
+[00:17:12.535] Server  LOG      ✓ Compiled in 134ms
+[00:17:33.768] Server  LOG      ✓ Compiled in 174ms
+[00:17:44.448] Server  LOG      ✓ Compiled in 173ms
+[00:19:14.327] Server  LOG      ✓ Compiled in 491ms
+[00:19:30.332] Server  LOG      ✓ Compiled in 91ms
+[00:20:42.558] Server  LOG      ✓ Compiled in 211ms
+[00:20:51.679] Server  LOG      ✓ Compiled in 75ms
+[00:21:01.347] Server  LOG      ✓ Compiled in 143ms
+[00:22:06.837] Server  LOG      ✓ Compiled in 369ms
+[00:22:25.268] Server  LOG      ✓ Compiled in 103ms
+[00:29:18.702] Server  LOG      ✓ Compiled in 184ms
+[00:29:37.269] Server  LOG      ✓ Compiled in 163ms
+[00:29:47.539] Server  LOG      ✓ Compiled in 94ms
+[00:35:29.148] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:29.150] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:29.153] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:29.155] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:33.929] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:33.930] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:33.931] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:35:33.932] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:09.664] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:09.665] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:09.666] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:09.667] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:10.797] Server  LOG      ✓ Compiled in 580ms
+[00:37:11.227] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.228] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.229] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.229] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.230] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.231] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.231] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.232] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:37:11.279] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:28.747] Server  LOG      ✓ Compiled in 57ms
+[00:38:38.097] Server  LOG      ✓ Compiled in 88ms
+[00:38:42.445] Server  LOG      ✓ Compiled in 59ms
+[00:38:53.356] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.357] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.358] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.359] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.360] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.361] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.362] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.363] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:53.384] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:56.320] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:56.321] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:56.322] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:56.323] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.022] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.023] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.024] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.025] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.026] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.027] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.027] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.028] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:38:57.073] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:02.776] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:39:02.777] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:39:02.777] Server  WARN     ⚠ [next]/internal/font/google/geist_a71539c9.module.css
+next/font: warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_a71539c9.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_a71539c9.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+
+[00:39:02.778] Server  WARN     ⚠ [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+next/font: warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import traces:
+  Client Component Browser:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component Browser]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Client Component Browser]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+  Client Component SSR:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css [Client Component SSR]
+    [next]/internal/font/google/geist_mono_8d43a2aa.js [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Client Component SSR]
+    ./src/app/[locale]/layout.tsx [Server Component]
+
+

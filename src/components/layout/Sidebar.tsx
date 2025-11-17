@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useAuth } from "@/hooks/useAuth";
 import { FaCheckSquare, FaUser, FaSignOutAlt } from "react-icons/fa";
 import { cn } from "@/utils/helpers/cn";
+import { AiFillHome } from "react-icons/ai";
 
 export const Sidebar: React.FC = () => {
   const { user, logout } = useAuth();
@@ -21,20 +22,7 @@ export const Sidebar: React.FC = () => {
   if (!user) return null;
 
   return (
-    <div className="w-64 bg-gradient-to-b from-[#1e3a5f] to-[#2c5282] min-h-screen flex flex-col text-white">
-      {/* Logo */}
-      {/* <div className="p-6 border-b border-white/10">
-        <div className="flex items-center gap-2">
-          <div className="bg-white/10 p-2 rounded">
-            <FaCheckSquare className="w-6 h-6 text-blue-400" />
-          </div>
-          <div>
-            <div className="text-sm text-blue-300 font-medium">DREAMY</div>
-            <div className="text-xs text-blue-200">SOFTWARE</div>
-          </div>
-        </div>
-      </div> */}
-
+    <div className="w-80 bg-gradient-to-b from-[#1e3a5f] to-[#2c5282] min-h-screen flex flex-col text-white">
       {/* Profile Section */}
       <div className="p-6 border-b border-white/10">
         <div className="flex flex-col items-center">
@@ -50,6 +38,18 @@ export const Sidebar: React.FC = () => {
 
       {/* Navigation */}
       <nav className="flex-1 p-4">
+        <Link
+          href="/en/dashboard"
+          className={cn(
+            "flex items-center gap-3 px-4 py-3 rounded-lg mb-2 transition-colors",
+            isActive("/dashboard")
+              ? "bg-white/10 text-white"
+              : "text-blue-200 hover:bg-white/5"
+          )}
+        >
+          <AiFillHome className="w-5 h-5" />
+          <span>Dashboard</span>
+        </Link>
         <Link
           href="/en/todos"
           className={cn(

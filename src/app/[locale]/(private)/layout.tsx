@@ -36,7 +36,7 @@ export default function PrivateLayout({
   }
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-[#E2ECF8]">
       {/* Sidebar - Persistent across navigation */}
       <Sidebar />
 
@@ -46,7 +46,7 @@ export default function PrivateLayout({
         <DashboardHeader />
 
         {/* Page Content - Changes on navigation */}
-        <div className="flex-1 overflow-auto">{children}</div>
+        <div className="flex-1 overflow-auto px-10">{children}</div>
       </div>
     </div>
   );

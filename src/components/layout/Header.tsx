@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { useAuth } from "@/hooks/useAuth";
 import { FaUser, FaSignOutAlt, FaCheckSquare } from "react-icons/fa";
 import { cn } from "@/utils/helpers/cn";
+import logo from "@/assets/logo/logo.svg";
 
 export const Header: React.FC = () => {
   const { user, logout } = useAuth();
